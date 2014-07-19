@@ -1,3 +1,11 @@
+body {
+	background-image: url("images/backdrops/06.jpg");
+}
+ 
+.navbar-default {
+	background-color: rgba(51,51,51,0.4);	
+}
+
 .navbar-icon {
 	font-size: 16px;
 }
@@ -12,14 +20,47 @@
 }
 
 .well-main {
+  background-color: rgba(51,51,51,0.4);
   -webkit-box-shadow: none;
   box-shadow: none;
   min-height: 20px;
   padding: 0px;
   margin-bottom: 20px;
-  background-color: #4e5d6c;
+  background-color: rgba(51,51,51,0.4);
   border: 0px;
   border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.modal-header, .modal-footer {
+	background-color: transparent;
+}
+
+.btn-default {
+	background-color: rgba(78,93,108, 0.5);
+}
+
+.btn-primary {
+	background-color: rgba(223, 105, 26, 0.9);
+}
+
+.navbar-form .form-control {
+	background-color: transparent;
+}
+
+::-webkit-input-placeholder {
+   color: #FFFFFF;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #FFFFFF;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #FFFFFF;  
+}
+
+:-ms-input-placeholder {  
+   color: #FFFFFF;  
 }
