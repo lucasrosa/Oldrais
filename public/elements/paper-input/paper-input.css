@@ -2,7 +2,8 @@
   display: inline-block;
   outline: none;
   text-align: inherit;
-  color: #757575;
+  color: #FFFFFF;
+  width: 100%;
 }
 :host(:hover) {
   cursor: text;
@@ -25,7 +26,7 @@
 :host /deep/ input,
 :host /deep/ textarea {
   font: inherit;
-  color: #000;
+  color: #FFFFFF;
   padding: 0;
   /* Important to use margin here so the margin remains visible
    * when textarea scrolls internally. */

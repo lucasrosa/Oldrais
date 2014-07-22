@@ -3,7 +3,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   
-	<title>contrails</title>
+	<title>Contrails</title>
 	<script src="/elements/platform/platform.js"></script>
 
 	<link rel="import" href="/elements/core-scroll-header-panel/core-scroll-header-panel.html">
@@ -14,48 +14,13 @@
   <link rel="import" href="/elements/core-menu/core-menu.html">
   <link rel="import" href="/elements/core-menu/core-submenu.html">
   <link rel="import" href="/elements/core-item/core-item.html">
+  <link rel="import" href="/elements/paper-checkbox/paper-checkbox.html">
+  
   <link href="/elements/font-roboto/roboto.html" rel="import">
   <link href="/elements/paper-input/paper-input.html" rel="import">
   
-  <style shim-shadowdom>
-
-    body {
-      font-family: sans-serif;
-      color: #333;
-    }
-
-    core-scroll-header-panel {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-    
-    /* background for toolbar when it is at its full size */
-    core-scroll-header-panel::shadow #headerBg {
-      background-image: url(/elements/core-scroll-header-panel/demos/images/bg9.jpg);
-    }
-    
-    /* background for toolbar when it is condensed */
-    core-scroll-header-panel::shadow #condensedHeaderBg {
-      background-color: #f4b400;
-    }
-    
-    core-toolbar {
-      color: #f1f1f1;
-      fill: #f1f1f1;
-    }
-    
-    .title {
-      font-size: 40px;
-    }
-    
-    .content {
-      padding: 10px 30px;
-    }
-
-  </style>
+  
+  
 </head>
 
 <body>
@@ -74,21 +39,20 @@
     
       <core-icon-button icon="arrow-back"></core-icon-button>
       <div flex></div>
+      <paper-input label="Type something..."></paper-input>
       <core-icon-button icon="search"></core-icon-button>
       <core-icon-button icon="more-vert"></core-icon-button>
-      <div class="bottom indent title">Title</div>
+      <div class="bottom indent title">Contrails</div>
       
     </core-toolbar>
     
     <div class="content">
       
       <section>
-  	<h1>&lt;paper-input&gt;</h1>
+		  <div class="container">
+			  {{> content}} 
+          </div>
     <div class="container">
-      <paper-input label="Type something..."></paper-input>
-    </div>
-    <div class="container">
-      <paper-input label="Type only numbers..." validate="^[0-9]*$" error="Input is not a number!"></paper-input>
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   </section>
@@ -109,6 +73,13 @@
       var scale = Math.max(0.75, (m - d.y) / (m / 0.25)  + 0.75);
       titleStyle.webkitTransform = titleStyle.transform = 
           'scale(' + scale + ') translateZ(0)';
+      
+      if (0.85 > scale) {
+	  		$(".title").slideUp();    
+      } else {
+	    $(".title").slideDown();    
+      }
+      
     });
   
   </script>
@@ -222,7 +193,13 @@
               <h4 class="modal-title">Modal title</h4>
             </div>
             <div class="modal-body">
-              <p>One fine body?</p>
+              <p><paper-checkbox class="tcheckbox"></paper-checkbox>&nbsp;&nbsp;&nbsp;One fine body?</p>
+              <br />
+              <paper-checkbox checked></paper-checkbox>
+              <div>
+				  <paper-input label="Type something..."></paper-input>
+				  <paper-input label="Type only numbers..." validate="^[0-9]*$" error="Input is not a number!"></paper-input>
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
