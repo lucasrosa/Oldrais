@@ -1,0 +1,36 @@
+<template name="component">
+	<div class="col-lg-6">
+		<div class="bs-component">
+          	<div class="well-main">
+            	<div class="modal-header">
+					<button type="button" 
+						class="close glyphicon glyphicon-remove btn-sm" data-dismiss="modal" aria-hidden="true"></button>
+					<h4 class="modal-title">Modal title</h4>
+				</div>
+            <div class="modal-body">
+            	{{#each componentFields}}
+              			{{> UI.dynamic template="field" data=this}}
+              	{{/each}}
+            </div>
+            <div class="modal-footer">
+              	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  	<button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+	  	</div> 
+	  	</div>
+	</div>
+</template>
+<template name="field">
+	<div class="form-group">
+		{{> UI.dynamic template=this}}
+	</div>
+</template>
+
+<template name="text">
+	<label class="control-label" for="inputDefault">Text</label>
+	<input type="text" class="form-control" id="inputDefault">
+</template>
+<template name="float">
+	<label class="control-label" for="inputDefault">Float</label>
+	<input type="text" class="form-control" id="inputDefault">
+</template>
