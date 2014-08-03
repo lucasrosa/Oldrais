@@ -7,13 +7,6 @@
   {{> content}}
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
-</template>
-
-
 
 <template name="navigation_bar">
 	<div class="navbar navbar-default navbar-fixed-top">
@@ -101,67 +94,17 @@
       </div>
     </div>
 </template>
-<template name="content">
 
-  <div class="container">
-  <div class="bs-docs-section">
-  <div class="row">
-          
-      <div class="col-lg-6">
-        <div class="bs-component">
-          	<div class="well-main">
-              <div class="modal-header">
-              <button type="button" class="close glyphicon glyphicon-remove btn-sm" data-dismiss="modal" aria-hidden="true"></button>
-              <h4 class="modal-title">Modal title</h4>
-            </div>
-            <div class="modal-body">
-              <p>One fine body?</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          	</div> 
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="bs-component">
-          	<div class="well-main">
-              <div class="modal-header">
-              <button type="button" class="close glyphicon glyphicon-remove btn-sm" data-dismiss="modal" aria-hidden="true"></button>
-              <h4 class="modal-title">Modal title</h4>
-            </div>
-            <div class="modal-body">
-              <p>One fine body?</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          	</div> 
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="bs-component">
-          	<div class="well-main">
-              <div class="modal-header">
-              <button type="button" class="close glyphicon glyphicon-remove btn-sm" data-dismiss="modal" aria-hidden="true"></button>
-              <h4 class="modal-title">Modal title</h4>
-            </div>
-            <div class="modal-body">
-              <p>One fine body?</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          	</div> 
-        </div>
-      </div>
-      
-      
-      
-    </div>
-    </div>
-  </div>
+<template name="content">
+	<div class="container">
+		<div class="bs-docs-section">
+			<div class="row">
+				{{> component}}
+				{{> component}}
+				{{> component}}
+				{{> component}}
+				{{> component}}
+			</div>
+		</div>
+	</div>
 </template>
