@@ -9,7 +9,7 @@
 				</div>
             <div class="modal-body">
             	{{#each componentFields}}
-              			{{> UI.dynamic template="field" data=this}}
+              		{{> UI.dynamic template="field" data=this}}
               	{{/each}}
             </div>
             <div class="modal-footer">
@@ -22,15 +22,15 @@
 </template>
 <template name="field">
 	<div class="form-group">
-		{{> UI.dynamic template=this}}
+		{{> UI.dynamic template=this.type data=this}}
 	</div>
 </template>
 
 <template name="text">
-	<label class="control-label" for="inputDefault">Text</label>
+	<label class="control-label" for="inputDefault">{{this.name}}</label>
 	<input type="text" class="form-control" id="inputDefault">
 </template>
 <template name="float">
-	<label class="control-label" for="inputDefault">Float</label>
+	<label class="control-label" for="inputDefault">{{this.name}}</label>
 	<input type="text" class="form-control" id="inputDefault">
 </template>

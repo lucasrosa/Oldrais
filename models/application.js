@@ -1,3 +1,5 @@
+Posts = new Meteor.Collection('posts');
+
 Applications = new Meteor.Collection('applications');
 ApplicationFields = new Meteor.Collection('applicationFields');
 
@@ -19,6 +21,18 @@ if (Applications.find().count() === 0) {
 	ApplicationFields.insert({
 		application: productsApplication._id,
 		name: "Price",
+		type: "float"	
+	});
+	
+	ApplicationFields.insert({
+		application: productsApplication._id,
+		name: "Weight",
+		type: "float"	
+	});
+	
+	ApplicationFields.insert({
+		application: productsApplication._id,
+		name: "Height",
 		type: "float"	
 	});
 }
