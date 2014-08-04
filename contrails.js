@@ -1,4 +1,8 @@
 if (Meteor.isClient) {
+	Meteor.subscribe('applications');
+	Meteor.subscribe('applicationFields');
+	Meteor.subscribe('applicationInstance');
+
   Template.hello.greeting = function () {
     return "Welcome to contrails.";
   };

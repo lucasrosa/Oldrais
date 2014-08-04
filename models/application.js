@@ -1,10 +1,10 @@
-Posts = new Meteor.Collection('posts');
-
 Applications = new Meteor.Collection('applications');
 ApplicationFields = new Meteor.Collection('applicationFields');
+ApplicationInstance = new Meteor.Collection('applicationInstance');
+
 
 // Fixture data 
-if (Applications.find().count() === 0) {
+if (Applications.find().count() === 0 && Meteor.isClient) {
 	var productsApplicationId = Applications.insert({
 		name: "Products",
 	});
